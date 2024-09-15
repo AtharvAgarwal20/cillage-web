@@ -1,0 +1,29 @@
+.card {
+  aspect-ratio: 510 / 708;
+  border-radius: 56px;
+  background: #f3b617;
+  width: 25%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: box-shadow 200ms linear;
+  text-decoration: none;
+  color: black;
+
+  img {
+    aspect-ratio: 1 / 1;
+    width: 50%;
+    margin-top: 10%;
+  }
+
+  p {
+    width: 85%;
+    text-align: center;
+  }
+
+  &:hover {
+    box-shadow: 4px 8px 8px 0px rgba(224, 150, 29, 0.8);
+  }
+}
