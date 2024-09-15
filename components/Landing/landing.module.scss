@@ -1,4 +1,22 @@
 .container {
   width: 100vw;
   height: 100lvh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+
+  .content {
+    grid-column-start: 8;
+    grid-column-end: 13;
+
+    .video {
+      aspect-ratio: 1038 / 585;
+      height: auto;
+      width: 100%;
+      border-radius: 20px;
+      border: none;
+      position: relative;
+      top: calc(50px + 80px + 30px);
+    }
+  }
 }
