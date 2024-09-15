@@ -11,9 +11,9 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -1px;
       width: 0%;
-      height: 2px;
+      height: 3px;
       background-color: #e0961d;
       border-radius: 10px;
 
@@ -21,7 +21,15 @@
     }
 
     &:hover::before {
-      width: 100%;
+      width: 80%;
     }
   }
+}
+
+.space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
 }
