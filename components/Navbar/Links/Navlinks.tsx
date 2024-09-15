@@ -1,5 +1,6 @@
-import { DownOutlined } from "@ant-design/icons";
 import styles from "./navlinks.module.scss";
+
+import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, ConfigProvider, Space } from "antd";
 import type { MenuProps } from "antd";
 import Link from "next/link";
@@ -11,7 +12,7 @@ interface NavlinkProps {
 
 function Navlink({ title, path }: NavlinkProps) {
   return (
-    <Link href={path} replace={false}>
+    <Link href={path} replace={false} className={styles.link}>
       {title}
     </Link>
   );
@@ -83,7 +84,7 @@ function DropdownLink() {
 
 export default function Nav() {
   return (
-    <div>
+    <div className={styles.linkContainer}>
       <Navlink title="Home" path="/" />
       <Navlink title="About Us" path="/about" />
       <Navlink title="Contact Us" path="/contact" />
