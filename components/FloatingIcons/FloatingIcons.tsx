@@ -12,11 +12,13 @@ export default function FloatingIcons() {
 
   return (
     <>
-      <Image
-        src={whatsappLogo}
-        alt="whatsapp icon"
-        className={`${styles.floatingIcons} ${styles.whatsapp}`}
-      />
+      <a href="https://wa.me/9922172011" target="_blank">
+        <Image
+          src={whatsappLogo}
+          alt="whatsapp icon"
+          className={`${styles.floatingIcons} ${styles.whatsapp}`}
+        />
+      </a>
       <Image
         src={searchLogo}
         alt="search icon"

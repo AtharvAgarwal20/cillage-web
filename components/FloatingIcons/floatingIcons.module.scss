@@ -1,8 +1,13 @@
 .floatingIcons {
   aspect-ratio: 1 / 1;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 60px;
+  bottom: 30px;
+  right: 5vw;
+  width: 50px;
   height: auto;
+  cursor: pointer;
+}
+
+.search {
+  bottom: 100px;
 }
