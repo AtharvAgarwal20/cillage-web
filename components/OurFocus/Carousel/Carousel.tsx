@@ -21,6 +21,7 @@ export default function Carousel() {
         heading="Clean Energy"
         desc="Providing clean and renewable energy to villages"
         path="/clean-energy"
+        style={{}}
       />
       <Card
         image={icon}
