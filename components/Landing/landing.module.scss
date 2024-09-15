@@ -6,11 +6,8 @@
   grid-template-columns: repeat(13, 1fr);
 
   .content {
-    grid-column-start: 7;
+    grid-column-start: 8;
     grid-column-end: 13;
-    position: relative;
-    top: calc(50px + 80px + 30px);
-    height: fit-content;
 
     .video {
       aspect-ratio: 1038 / 585;
@@ -18,16 +15,8 @@
       width: 100%;
       border-radius: 20px;
       border: none;
-      margin-bottom: 20px;
-    }
-
-    .tagline {
-      color: #e0961d;
-      font-family: "Montserrat", sans-serif;
-      font-size: 35px;
-      font-style: normal;
-      font-weight: 800;
-      line-height: normal;
+      position: relative;
+      top: calc(50px + 80px + 30px);
     }
   }
 
