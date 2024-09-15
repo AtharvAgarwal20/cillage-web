@@ -13,10 +13,6 @@ export default function Landing() {
           allowFullScreen
         />
       </section>
-      <div className={styles.footer}>
-        <div className={styles.villager}></div>
-        <div className={styles.wheat}></div>
-      </div>
     </main>
   );
 }
