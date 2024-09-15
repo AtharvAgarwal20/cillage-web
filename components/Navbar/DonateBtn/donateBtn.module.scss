@@ -1,0 +1,12 @@
+.btn {
+  height: calc(110 / 132 * 100%);
+  width: clamp(100px, 20%, 120px);
+  border: none;
+  background-color: #e0961d;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 20px;
+  cursor: pointer;
+}
