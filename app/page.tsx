@@ -2,6 +2,7 @@
 
 import FloatingIcons from "@/components/FloatingIcons/FloatingIcons";
 import Landing from "@/components/Landing/Landing";
+import OurFocus from "@/components/OurFocus/OurFocus";
 import { SearchProvider } from "@/store/search-ctx";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     <>
       <main>
         <Landing />
+        <OurFocus />
       </main>
       <SearchProvider>
         <FloatingIcons />
