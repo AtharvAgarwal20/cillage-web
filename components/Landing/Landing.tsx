@@ -14,10 +14,6 @@ export default function Landing() {
         />
         <h1 className={styles.tagline}>Transforming Village Life</h1>
       </section>
-      <div className={styles.footer}>
-        <div className={styles.villager}></div>
-        <div className={styles.wheat}></div>
-      </div>
     </main>
   );
 }
