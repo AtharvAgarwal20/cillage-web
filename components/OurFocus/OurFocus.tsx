@@ -1,9 +1,13 @@
+import Carousel from "./Carousel/Carousel";
 import styles from "./ourfocus.module.scss";
 
 export default function OurFocus() {
   return (
     <main className={styles.container}>
-      <h1>Our Focus</h1>
+      <div className={styles.content}>
+        <h1 className={styles.title}>Our Focus</h1>
+        <Carousel />
+      </div>
     </main>
   );
 }
