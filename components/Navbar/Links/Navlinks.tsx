@@ -3,7 +3,7 @@
 import styles from "./navlinks.module.scss";
 
 import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, ConfigProvider, Space } from "antd";
+import { Dropdown, ConfigProvider } from "antd";
 import type { MenuProps } from "antd";
 import Link from "next/link";
 

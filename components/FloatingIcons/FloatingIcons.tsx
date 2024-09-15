@@ -23,6 +23,7 @@ export default function FloatingIcons() {
         src={searchLogo}
         alt="search icon"
         className={`${styles.floatingIcons} ${styles.search}`}
+        onClick={ctx?.toggleSearch}
       />
     </>
   );

@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+// import styles from "./page.module.scss";
 
 import FloatingIcons from "@/components/FloatingIcons/FloatingIcons";
 import Landing from "@/components/Landing/Landing";
