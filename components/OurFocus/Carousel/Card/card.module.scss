@@ -10,6 +10,9 @@
   transition: box-shadow 200ms linear;
   text-decoration: none;
   color: black;
+  cursor: default;
+  scale: 0.8;
+  transition: all 200ms linear;
 
   img {
     aspect-ratio: 1 / 1;
@@ -21,9 +24,18 @@
     width: 85%;
     text-align: center;
   }
-}
 
-.active:hover {
-  cursor: pointer;
-  box-shadow: 4px 8px 8px 0px rgba(224, 150, 29, 0.8);
+  &.active {
+    cursor: pointer;
+    scale: 1;
+
+    &:hover {
+      scale: 1.1;
+      box-shadow: 4px 8px 8px 0px rgba(224, 150, 29, 0.8);
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
 }

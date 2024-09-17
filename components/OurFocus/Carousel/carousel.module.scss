@@ -1,5 +1,24 @@
 .carouselContainer {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
+  align-items: center;
+  margin-top: 1.25rem;
+
+  .arrow {
+    aspect-ratio: 1 / 1;
+    width: clamp(4rem, 7.5%, 6rem);
+    height: auto;
+    position: absolute;
+    cursor: pointer;
+    z-index: 9;
+
+    &.left {
+      transform: rotateZ(180deg);
+      left: 1.75%;
+    }
+
+    &.right {
+      right: 1.75%;
+    }
+  }
 }
