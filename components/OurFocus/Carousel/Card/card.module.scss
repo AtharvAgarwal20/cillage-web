@@ -3,7 +3,6 @@
   border-radius: 56px;
   background: #f3b617;
   width: 25%;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,8 +21,9 @@
     width: 85%;
     text-align: center;
   }
+}
 
-  &:hover {
-    box-shadow: 4px 8px 8px 0px rgba(224, 150, 29, 0.8);
-  }
+.active:hover {
+  cursor: pointer;
+  box-shadow: 4px 8px 8px 0px rgba(224, 150, 29, 0.8);
 }

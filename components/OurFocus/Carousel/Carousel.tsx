@@ -12,6 +12,7 @@ export default function Carousel() {
         heading="Clean Energy"
         desc="Providing clean and renewable energy to villages"
         path="/clean-energy"
+        isActive={false}
         style={{
           scale: 0.8,
         }}
@@ -21,6 +22,7 @@ export default function Carousel() {
         heading="Clean Energy"
         desc="Providing clean and renewable energy to villages"
         path="/clean-energy"
+        isActive={true}
         style={{}}
       />
       <Card
@@ -28,6 +30,7 @@ export default function Carousel() {
         heading="Clean Energy"
         desc="Providing clean and renewable energy to villages"
         path="/clean-energy"
+        isActive={false}
         style={{
           scale: 0.8,
         }}

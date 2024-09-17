@@ -8,7 +8,7 @@ import Nav from "./Links/Navlinks";
 import DonateBtn from "./DonateBtn/DonateBtn";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { LegacyRef, RefObject, useRef } from "react";
+import { useRef } from "react";
 
 gsap.registerPlugin(Observer);
 
@@ -19,7 +19,7 @@ export default function Navbar() {
       const moveNavInY = (value: number) => {
         gsap.to(navRef.current, {
           yPercent: value,
-          duration: 0.5,
+          duration: 0.2,
           ease: "none",
         });
       };
@@ -28,7 +28,7 @@ export default function Navbar() {
         target: window,
         type: "scroll",
         onDown: (self) => {
-          moveNavInY(-200);
+          moveNavInY(-100);
         },
         onUp: (self) => {
           moveNavInY(0);
@@ -39,14 +39,16 @@ export default function Navbar() {
   );
 
   return (
-    <nav className={styles.navbar} ref={navRef}>
-      <img
-        src="/Images/CillageLogo_Text.svg"
-        alt="cillage logo"
-        className={styles.logo}
-      />
-      <Nav />
-      <DonateBtn />
-    </nav>
+    <div className={styles.navbarContainer} ref={navRef}>
+      <nav className={styles.navbar}>
+        <img
+          src="/Images/CillageLogo_Text.svg"
+          alt="cillage logo"
+          className={styles.logo}
+        />
+        <Nav />
+        <DonateBtn />
+      </nav>
+    </div>
   );
 }

@@ -7,6 +7,8 @@ import type { MenuProps } from "antd";
 import Link from "next/link";
 
 import { WhoWeAreItems } from "./LinkMenuItems";
+import { WhatWeDoItems } from "./LinkMenuItems";
+import { GetInvolvedItems } from "./LinkMenuItems";
 
 interface NavlinkProps {
   title: string;
@@ -54,8 +56,8 @@ export default function Nav() {
     <div className={styles.linkContainer}>
       <Navlink title="Home" path="/" />
       <DropdownLink items={WhoWeAreItems} title="Who We Are?" />
-      <DropdownLink items={WhoWeAreItems} title="What We Do?" />
-      <DropdownLink items={WhoWeAreItems} title="Get Involved" />
+      <DropdownLink items={WhatWeDoItems} title="What We Do?" />
+      <DropdownLink items={GetInvolvedItems} title="Get Involved" />
     </div>
   );
 }

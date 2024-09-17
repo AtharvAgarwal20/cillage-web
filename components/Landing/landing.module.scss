@@ -4,12 +4,12 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(13, 1fr);
+  padding-top: calc(50px + 80px + 30px);
 
-  .content {
+  .videoContent {
     grid-column-start: 7;
     grid-column-end: 13;
     position: relative;
-    top: calc(50px + 80px + 30px);
     height: fit-content;
 
     .video {
@@ -29,5 +29,10 @@
       font-weight: 800;
       line-height: normal;
     }
+  }
+
+  .caption {
+    grid-column-start: 2;
+    grid-column-end: 6;
   }
 }
