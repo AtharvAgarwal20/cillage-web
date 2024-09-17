@@ -1,13 +1,13 @@
 "use client";
 
+import { OUR_FOCUS_LIST } from "@/data/OurFocus";
 import styles from "./carousel.module.scss";
 import arrow from "@/assets/CarouselIcons/arrow.svg";
 
 import Card from "./Card/Card";
 
-import { OUR_FOCUS_LIST } from "@/data/OurFocus";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
