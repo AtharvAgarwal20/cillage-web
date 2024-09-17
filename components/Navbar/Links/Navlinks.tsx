@@ -2,10 +2,11 @@
 
 import styles from "./navlinks.module.scss";
 
-import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, ConfigProvider } from "antd";
 import type { MenuProps } from "antd";
 import Link from "next/link";
+
+import { WhoWeAreItems } from "./LinkMenuItems";
 
 interface NavlinkProps {
   title: string;
@@ -20,76 +21,12 @@ function Navlink({ title, path }: NavlinkProps) {
   );
 }
 
-function DropdownLink() {
-  const items: MenuProps["items"] = [
-    {
-      key: "1",
-      label: "Submenu 1",
-      children: [
-        {
-          key: "1-1",
-          label: (
-            <Link href="/submenu1/1" replace={false}>
-              Submenu 1-1
-            </Link>
-          ),
-        },
-        {
-          key: "1-2",
-          label: (
-            <Link href="/submenu1/2" replace={false}>
-              Submenu 1-2
-            </Link>
-          ),
-        },
-      ],
-    },
-    {
-      key: "2",
-      label: "Submenu 2",
-      children: [
-        {
-          key: "2-1",
-          label: (
-            <Link href="/submenu2/1" replace={false}>
-              Submenu 2-1
-            </Link>
-          ),
-        },
-        {
-          key: "2-2",
-          label: (
-            <Link href="/submenu2/2" replace={false}>
-              Submenu 2-2
-            </Link>
-          ),
-        },
-      ],
-    },
-    {
-      key: "3",
-      label: "Submenu 3",
-      children: [
-        {
-          key: "3-1",
-          label: (
-            <Link href="/submenu3/1" replace={false}>
-              Submenu 3-1
-            </Link>
-          ),
-        },
-        {
-          key: "3-2",
-          label: (
-            <Link href="/submenu3/2" replace={false}>
-              Submenu 3-2
-            </Link>
-          ),
-        },
-      ],
-    },
-  ];
+interface DropdownLinkProps {
+  title: string;
+  items: MenuProps["items"];
+}
 
+function DropdownLink({ title, items }: DropdownLinkProps) {
   return (
     <ConfigProvider
       theme={{
@@ -103,11 +40,9 @@ function DropdownLink() {
           onClick={(e) => {
             e.preventDefault();
           }}
+          className={styles.space}
         >
-          <div className={styles.space}>
-            Our Vision
-            <DownOutlined />
-          </div>
+          {title}
         </a>
       </Dropdown>
     </ConfigProvider>
@@ -118,9 +53,9 @@ export default function Nav() {
   return (
     <div className={styles.linkContainer}>
       <Navlink title="Home" path="/" />
-      <Navlink title="About Us" path="/about" />
-      <Navlink title="Contact Us" path="/contact" />
-      <DropdownLink />
+      <DropdownLink items={WhoWeAreItems} title="Who We Are?" />
+      <DropdownLink items={WhoWeAreItems} title="What We Do?" />
+      <DropdownLink items={WhoWeAreItems} title="Get Involved" />
     </div>
   );
 }
