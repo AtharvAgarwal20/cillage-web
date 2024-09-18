@@ -10,7 +10,7 @@ interface CardProps {
   path: string;
   desc: string;
   isActive: boolean;
-  isHidden: boolean;
+  isHidden: boolean | undefined;
 }
 
 export default function Card({

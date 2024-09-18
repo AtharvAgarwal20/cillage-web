@@ -43,11 +43,19 @@ export default function Carousel() {
           path={path}
           isActive={index === activeIndex}
           isHidden={
-            !(
-              index >= activeIndex - 1 &&
-              index <= activeIndex + 1 &&
-              (activeIndex !== 0 || activeIndex !== OUR_FOCUS_LIST.length - 1)
-            )
+            activeIndex === 0
+              ? !(
+                  index === 1 ||
+                  index === OUR_FOCUS_LIST.length - 1 ||
+                  index === 0
+                )
+              : activeIndex === OUR_FOCUS_LIST.length - 1
+              ? !(
+                  index === OUR_FOCUS_LIST.length - 2 ||
+                  index === OUR_FOCUS_LIST.length - 1 ||
+                  index === 0
+                )
+              : !(index >= activeIndex - 1 && index <= activeIndex + 1)
           }
         />
       );
