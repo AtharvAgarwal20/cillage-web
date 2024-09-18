@@ -6,11 +6,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 .embla__viewport {
   overflow: hidden;
-  width: 100%;
+  width: calc(20vw * 3 + 3rem * 3);
   height: 100%;
   display: flex;
   align-items: center;
