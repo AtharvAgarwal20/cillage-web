@@ -1,18 +1,24 @@
 .card {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 20vw;
+  min-width: 0;
+  margin-left: 3rem;
   aspect-ratio: 510 / 708;
   border-radius: 56px;
   background: #f3b617;
-  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  transition: box-shadow 200ms linear;
   text-decoration: none;
   color: black;
-  cursor: default;
-  scale: 0.8;
+  cursor: pointer;
   transition: all 200ms linear;
+  max-height: 430px;
+
+  &:hover {
+    box-shadow: 4px 8px 8px 0px rgba(224, 150, 29, 0.8);
+  }
 
   img {
     aspect-ratio: 1 / 1;
@@ -23,19 +29,5 @@
   p {
     width: 85%;
     text-align: center;
-  }
-
-  &.active {
-    cursor: pointer;
-    scale: 1;
-
-    &:hover {
-      scale: 1.1;
-      box-shadow: 4px 8px 8px 0px rgba(224, 150, 29, 0.8);
-    }
-  }
-
-  &.hidden {
-    display: none;
   }
 }

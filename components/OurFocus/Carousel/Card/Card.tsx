@@ -9,30 +9,11 @@ interface CardProps {
   image: any;
   path: string;
   desc: string;
-  isActive: boolean;
-  isHidden: boolean | undefined;
 }
 
-export default function Card({
-  heading,
-  image,
-  desc,
-  path,
-  isActive,
-  isHidden,
-}: CardProps) {
+export default function Card({ heading, image, desc, path }: CardProps) {
   return (
-    <Link
-      href={path}
-      replace={false}
-      className={
-        isActive
-          ? `${styles.active} ${styles.card}`
-          : isHidden
-          ? `${styles.hidden} ${styles.card}`
-          : `${styles.card}`
-      }
-    >
+    <Link href={path} replace={false} className={styles.card}>
       <Image src={image} alt="icon" />
       <h2>{heading}</h2>
       <p>{desc}</p>

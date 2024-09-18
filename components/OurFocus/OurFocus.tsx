@@ -4,7 +4,7 @@ import styles from "./ourfocus.module.scss";
 import { EmblaOptionsType } from "embla-carousel";
 
 const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
-const SLIDE_COUNT = 5;
+const SLIDE_COUNT = 8;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 export default function OurFocus() {
